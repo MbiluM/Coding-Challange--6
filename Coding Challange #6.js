@@ -10,3 +10,22 @@ const calculateSalesTax = (amount, taxRate) => amount * taxRate; //Sales Tax For
 
 console.log(calculateSalesTax(100, 0.07)) //Output: 7
 console.log(calculateSalesTax(500, 0.1)) //Output: 50
+
+// Task 3 - Employee Bonus Calculation
+let culculateBonus = (salary, performanceRating) => { // Culculated bonuses 
+    let bonusPercentage = 0;
+if (performanceRating === "Excellent"){
+    bonusPercentage = 0.20;
+} else if (performanceRating === "Good") {
+    bonusPercentage = 0.10;
+} else if (performanceRating === "Average") {
+    bonusPercentage = 0.05;
+} else {
+    return "Invalid performance rating";
+}
+let Bonus = salary * bonusPercentage;
+    return `Bonus: $${Bonus}`; // Return the word Bonus along with the dollar amount
+}
+
+console.log(calculateBonus(5000, "Excellent")); // Output: $1000
+console.log(calculateBonus(7000, "Good"));  // Output: $700
