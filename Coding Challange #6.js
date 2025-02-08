@@ -59,3 +59,12 @@ return `ConvertedAmount: $${convertedAmount.toFixed(2)}}` // "toFixed(2)" is use
 }
 console.log(convertCurrency(100, 1.1)); //output: Converted Amount: $110.00
 console.log(convertCurrency(250, 0.85)); //output: Converted Amount: $212.50
+
+// Task 6 - Higher-Order Function for Bulk Orders
+function applyBulkDiscount(order, discount){
+    return order.map(discount); //// Applied discount function to each order
+}
+let orders = [200, 600, 1200, 450, 800];
+let discount  = (orders, amount => amount > 500 ? amount * 0.9 : amount); //10% discount to orders above $500
+let discountedPrice = applyBulkDiscount(orders, discount)
+console.log(discountedPrice) // output: (200, 540, 1080, 450, 720)
