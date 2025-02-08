@@ -51,3 +51,11 @@ return `Total Cost: $${totalCost}`; // Return the word Bonus along with the doll
 
 console.log(calculateSubscriptionCost("Basic", 6, 10)); // output: "Total Cost: $50"
 console.log(calculateSubscriptionCost("Premium", 12, 0)); // output: "Total Cost: $240"
+
+// Task 5 - Currency Conversion
+const convertCurrency = function(amount, exchangeRate){ //Function
+let convertedAmount = (amount * exchangeRate); //Formula
+return `ConvertedAmount: $${convertedAmount.toFixed(2)}}` // "toFixed(2)" is used to add 2 decimal places to the output
+}
+console.log(convertCurrency(100, 1.1)); //output: Converted Amount: $110.00
+console.log(convertCurrency(250, 0.85)); //output: Converted Amount: $212.50
