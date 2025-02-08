@@ -5,11 +5,13 @@ const calculateProfit = (costPrice, sellingPrice, unitsSold) => {
 console.log(calculateProfit(20, 30, 100)) //Expected Output: 1000
 console.log(calculateProfit(50, 70, 200)) //Expected Output: 4000
 
+
 // Task 2 - Sales Tax Computation 
 const calculateSalesTax = (amount, taxRate) => amount * taxRate; //Sales Tax Formula
 
 console.log(calculateSalesTax(100, 0.07)) //Output: 7
 console.log(calculateSalesTax(500, 0.1)) //Output: 50
+
 
 // Task 3 - Employee Bonus Calculation
 let culculateBonus = (salary, performanceRating) => { // Culculated bonuses 
@@ -29,3 +31,23 @@ let Bonus = salary * bonusPercentage;
 
 console.log(calculateBonus(5000, "Excellent")); // Output: $1000
 console.log(calculateBonus(7000, "Good"));  // Output: $700
+
+
+// Task 4 - Subscription Pricing Model
+let culculateSubsriptionCost = (plan, months, discount = 0) => { // Set monthly subscription cost
+    let monthlycost  = 0;
+if (SubscriptionCost === "Basic"){
+    monthlycost = 10;
+} else if (SubscriptionCost === "Premium") {
+    monthlycost = 20;
+} else if (SubscriptionCost === "Enterprise") {
+    monthlycost = 50;
+} else {
+    return "Invalid Subscription";
+}
+let totalMonthlyCost = ((monthlycost * months)/discount); //Formula
+return `Total Cost: $${totalCost}`; // Return the word Bonus along with the dollar amount
+}
+
+console.log(calculateSubscriptionCost("Basic", 6, 10)); // output: "Total Cost: $50"
+console.log(calculateSubscriptionCost("Premium", 12, 0)); // output: "Total Cost: $240"
