@@ -86,8 +86,6 @@ if (employeeLevel >= 10) return employeeLevel;
 return calculateYearToPromotion(employeeLevel +1, years+2) // recursive function to increase
 }
 
-    
-
 console.log(calculateYearToPromotion(7)); // output: "Years to Level 10: 6"
 console.log(calculateYearToPromotion(5)); // output: "Years to Level 10: 10"
 
